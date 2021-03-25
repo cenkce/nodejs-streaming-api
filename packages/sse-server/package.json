@@ -1,0 +1,23 @@
+{
+  "name": "sse-example-sse-server",
+  "version": "1.0.0",
+  "description": "SSE Server",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "start:dev": "ts-node-dev ./src/server.ts --watch"
+  },
+  "dependencies": {
+    "fastify": "^3.14.0",
+    "fastify-sse-v2": "^2.0.3",
+    "ioredis": "^4.24.4",
+    "rxjs": "^6.6.6",
+    "sse-example-redis": "*",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.22.1",
+    "ts-node-dev": "^1.1.6"
+  }
+}

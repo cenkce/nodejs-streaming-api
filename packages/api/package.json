@@ -1,0 +1,23 @@
+{
+  "name": "sse-example-rest-api",
+  "version": "1.0.0",
+  "description": "Api",
+  "main": "index.js",
+  "author": "Cenk Cetinkaya <mail@cenkcetinkaya.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "ts-node ./src/server.ts",
+    "start:dev": "ts-node-dev ./src/server.ts --watch"
+  },
+  "dependencies": {
+    "fastify": "^3.14.0",
+    "fastify-cors": "^5.2.0",
+    "ioredis": "^4.24.4",
+    "ts-node": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/ioredis": "^4.22.1",
+    "ts-node-dev": "^1.1.6"
+  }
+}

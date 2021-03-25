@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+    },
+    "bootstrap": {
+    }
+  },
+  "useWorkspaces": true,
+  "packages": ["packages/*", "src"]
+}

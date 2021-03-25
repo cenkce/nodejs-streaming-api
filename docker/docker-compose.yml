@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  redis-sentinel:
+    image: bitnami/redis-sentinel:5.0.8
+    environment:
+      - REDIS_MASTER_HOST=localhost
+    # volumes:
+    #   - redis-sentinel_data:/bitnami
+    ports:
+      - "26379:26379"
+  redis-master:
+    image: redis:5.0.8
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    # volumes:
+    #   - redis_data:/bitnami
+    ports:
+      - "6379:6379"
+  redis_slave:
+    image: redis:5.0.8
+    command: redis-server --slaveof redis-master 6379
+    depends_on:
+        - redis-master
+volumes:
+  redis-sentinel_data:
+    driver: local
+  redis_data:
+    driver: local
