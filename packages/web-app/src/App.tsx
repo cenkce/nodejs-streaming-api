@@ -25,7 +25,7 @@ function App() {
         <div>Tick : {tick}</div>
         <div>Tock : {tock}</div>
         <p></p>
-        <button onClick={() => {
+        <button style={{fontSize: "24px"}} onClick={() => {
           fetch("http://localhost:3002/tock", {method: "PUT", body: JSON.stringify({tock: tock+1})})
         }}> Tock </button>
       </header>
