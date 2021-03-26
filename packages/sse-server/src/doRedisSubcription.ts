@@ -7,7 +7,7 @@ export function doRedisSubcription(eventEmmitter: EventEmitter) {
   //Redis subscription start
   const redisSubscriber = createRedisClient();
 
-  redisSubscriber.subscribe("tock", (err, count) => {
+  redisSubscriber.subscribe("tock", (err: Error | null, count: any | null) => {
     err && server.log.error("Subscription error : ", err);
   });
 
