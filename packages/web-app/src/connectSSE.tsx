@@ -31,10 +31,4 @@ export function connectSSE() {
   client.onerror = (e) => {
     console.log("Error : ", e);
   };
-
-  // return async function* (){
-  //   for await(let event of emitter){
-  //     yield event;
-  //   }
-  // }
 }
